@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "wh_production",
+    "description": "Source from Lakehouse. This is the silver layer."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "61a63b82-ef17-b230-4482-a11add3f1275"
+  }
+}

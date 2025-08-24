@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "dfg2_APISilver",
+    "description": "Process Nutrients KPI from lakehouse to warehouse"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "16850ca7-e8f8-8bf4-4d81-0ca9888f71f5"
+  }
+}

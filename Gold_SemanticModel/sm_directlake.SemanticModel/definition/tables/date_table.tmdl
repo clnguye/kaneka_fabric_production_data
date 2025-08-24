@@ -1,0 +1,295 @@
+table date_table
+	lineageTag: 15fbd421-c283-49ce-ba62-d940d4729d8b
+	sourceLineageTag: [dbo].[date_table]
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: 9e519406-9463-45e3-9a39-3e6e71e3bb74
+		sourceLineageTag: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		changedProperty = FormatString
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Day
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 53d3d3a1-19ea-4f7e-8f62-85ad20bfe458
+		sourceLineageTag: Day
+		summarizeBy: none
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 07613e4a-8ad7-43e2-ab94-f8d01799a066
+		sourceLineageTag: Quarter
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: da411eb1-a085-40d4-927e-2ee13ae6e873
+		sourceLineageTag: Month Name
+		summarizeBy: none
+		sourceColumn: Month Name
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: double
+		formatString: 0
+		sourceProviderType: float
+		lineageTag: 7d1974f1-1a52-4fa3-966c-f7106244351c
+		sourceLineageTag: Month
+		summarizeBy: sum
+		sourceColumn: Month
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Yr'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f2d3b021-b21a-402a-85fe-ea227b2d95f4
+		sourceLineageTag: Month Yr
+		summarizeBy: none
+		sourceColumn: Month Yr
+		sortByColumn: 'Yr Month'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Yr Month'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8dc3bf8f-e7fc-492c-ac3c-d07a049ef99e
+		sourceLineageTag: Yr Month
+		summarizeBy: none
+		sourceColumn: Yr Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: float
+		lineageTag: 2c51787a-01da-40b7-bae8-3bb1018ef383
+		sourceLineageTag: Year
+		summarizeBy: sum
+		sourceColumn: Year
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekend
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 22e41673-477e-4494-9944-fb745a06f05c
+		sourceLineageTag: Weekend
+		summarizeBy: none
+		sourceColumn: Weekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week of year'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 5d0551db-858b-4193-a47d-3b246736a4fc
+		sourceLineageTag: Week of year
+		summarizeBy: sum
+		sourceColumn: Week of year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Week of month'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 83cae62d-65e3-4a28-bdcc-2d035f0af886
+		sourceLineageTag: Week of month
+		summarizeBy: sum
+		sourceColumn: Week of month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Start of quarter'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: c1b0037d-53f2-4305-a824-2e4cd4149e4e
+		sourceLineageTag: Start of quarter
+		summarizeBy: none
+		sourceColumn: Start of quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'End of quarter'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 6d5dd2b6-a3dd-4f7c-a39e-f03a6826a013
+		sourceLineageTag: End of quarter
+		summarizeBy: none
+		sourceColumn: End of quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Start of month'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 979eadaf-deb4-4ecd-b571-9aadc6d265d3
+		sourceLineageTag: Start of month
+		summarizeBy: none
+		sourceColumn: Start of month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'End of month'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: f2af13b4-27da-46e7-842b-12ff34e2b54f
+		sourceLineageTag: End of month
+		summarizeBy: none
+		sourceColumn: End of month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Days in month'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 60608b4d-ea81-4e56-a0a4-fb77b124f7e7
+		sourceLineageTag: Days in month
+		summarizeBy: sum
+		sourceColumn: Days in month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Fiscal year'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: float
+		lineageTag: 1ea21722-bf27-4eb4-af7c-a7d109311515
+		sourceLineageTag: Fiscal year
+		summarizeBy: sum
+		sourceColumn: Fiscal year
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal month'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 3aff112a-f03c-4afd-a065-8f47d44fb0e4
+		sourceLineageTag: Fiscal month
+		summarizeBy: sum
+		sourceColumn: Fiscal month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Fiscal Quarter'
+		dataType: string
+		sourceProviderType: varchar(2)
+		lineageTag: 8682cda8-1b4f-4ecd-b093-c292a6cdf9b0
+		sourceLineageTag: Fiscal Quarter
+		summarizeBy: none
+		sourceColumn: Fiscal Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Year End'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: c9c5c085-0e07-4df5-9f65-b698b1d69fa1
+		sourceLineageTag: Fiscal Year End
+		summarizeBy: sum
+		sourceColumn: Fiscal Year End
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	hierarchy 'Date Hierarchy'
+		lineageTag: ba9d572e-1929-456b-bd81-7632a35dabe3
+
+		level Year
+			lineageTag: f90b718d-a991-4304-9f5c-1e71d369d9cd
+			column: Year
+
+		level Quarter
+			lineageTag: 72768e27-9f61-4f01-9545-46aca39e565c
+			column: Quarter
+
+		level 'Month Name'
+			lineageTag: bc4411da-e6c1-4559-870e-25e40cd9c159
+			column: 'Month Name'
+
+		level Date
+			lineageTag: 0c3b2d79-1566-4a9a-ba94-aaf9a204f73a
+			column: Date
+
+		changedProperty = Name
+
+	hierarchy 'Fiscal Hierarchy'
+		lineageTag: 7d2432bc-e38d-4a4c-909a-ba8a1fc1b1cc
+
+		level 'Fiscal year'
+			lineageTag: 40a22acd-1595-46a5-9489-0f929c9acd27
+			column: 'Fiscal year'
+
+		level 'Fiscal Quarter'
+			lineageTag: 7687b8e0-7ba1-47cb-a4bc-7038b8b4f38f
+			column: 'Fiscal Quarter'
+
+		level 'Month Name'
+			lineageTag: dc5fe79b-38d8-4ee6-a731-01fc94348c63
+			column: 'Month Name'
+
+		level Date
+			lineageTag: 143ac5f3-c555-4072-a39e-e89169ba812d
+			column: Date
+
+		changedProperty = Name
+
+	partition date_table = entity
+		mode: directLake
+		source
+			entityName: date_table
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

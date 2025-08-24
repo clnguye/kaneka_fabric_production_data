@@ -1,0 +1,12 @@
+relationship c24b5315-b957-a540-fa6a-1a25f05518df
+	fromColumn: pivot_nutrients.LastDayOfMonth
+	toColumn: date_table.Date
+
+relationship e36122ec-7bed-ce0a-bf98-caf721c8c3aa
+	fromColumn: unpivot_nutrients.LastDayOfMonth
+	toColumn: date_table.Date
+
+relationship d6ffbd22-cbab-6f11-3ec6-b15643424390
+	fromColumn: unpivot_nutrients.Attribute
+	toColumn: table_column_metadata.Attribute
+

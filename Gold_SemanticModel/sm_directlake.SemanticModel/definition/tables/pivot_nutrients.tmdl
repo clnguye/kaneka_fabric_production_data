@@ -1,0 +1,736 @@
+table pivot_nutrients
+	lineageTag: e42b8b96-0e32-4042-9ace-dc639a202b2b
+	sourceLineageTag: [dbo].[pivot_nutrients]
+
+	measure actual_q10_kgsM = CALCULATE(SUM(pivot_nutrients[actual_q10_kgs]))
+		lineageTag: 2e0d58fc-4c43-43d8-8bc3-a32a63fe6a01
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure actual_qh_kgsM = CALCULATE(SUM(pivot_nutrients[actual_qh_kgs]))
+		formatString: #,0.00
+		lineageTag: 5dd243ff-70a4-4b8f-b627-eb40cb96fefe
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure equipment_downtime_hrsM = CALCULATE(SUM(pivot_nutrients[equipment_downtime_hrs]))
+		formatString: #,0
+		lineageTag: 281574e9-836c-4ac6-b9a1-42ab4d32dbb3
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure equipment_downtime_percentM = CALCULATE(AVERAGE(pivot_nutrients[equipment_downtime_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bb3f90e4-a594-48ea-be8b-2cabef532b77
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure fixed_cost_percentM = CALCULATE(AVERAGE(pivot_nutrients[fixed_cost_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: cfc0d019-9622-4e08-845c-90718c02e169
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure maintenance_cost_percentM = CALCULATE(AVERAGE(pivot_nutrients[maintenance_cost_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 28cdcd34-c391-44cf-8675-05b67b5111a4
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure oee_gross_percentM = CALCULATE(AVERAGE(pivot_nutrients[oee_gross_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d4be9f62-c041-4ec6-97b9-d87c9732c0c1
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure oee_net_percentM = CALCULATE(AVERAGE(pivot_nutrients[oee_net_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 08282c54-3fbd-4108-86ab-93a17b4f8a97
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure packaging_yield_percentM = CALCULATE(AVERAGE(pivot_nutrients[packaging_yield_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: cfb8dbd8-ef74-4db5-9d22-6eb392edc862
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure planned_q10_kgsM = CALCULATE(SUM(pivot_nutrients[planned_q10_kgs]))
+		formatString: #,0.00
+		lineageTag: 4a59075f-8f75-490c-911e-5049b23af492
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure planned_qh_kgsM = CALCULATE(SUM(pivot_nutrients[planned_qh_kgs]))
+		formatString: #,0.00
+		lineageTag: fc187e84-e65a-43aa-899e-bb6ed218bb13
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure process_downtime_hrsM = CALCULATE(SUM(pivot_nutrients[process_downtime_hrs]))
+		formatString: #,0.00
+		lineageTag: dc8664f7-897f-45c4-9050-c43b45c73b40
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure process_downtime_percentM = CALCULATE(AVERAGE(pivot_nutrients[process_downtime_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 969ccbe4-9569-48f9-9bd0-5161b43bde62
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure scheduled_downtime_hrsM = CALCULATE(SUM(pivot_nutrients[scheduled_downtime_hrs]))
+		formatString: #,0
+		lineageTag: 6f8b9a2a-a4e8-416e-b066-19d8a16569f0
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure scheduled_downtime_percentM = CALCULATE(AVERAGE(pivot_nutrients[scheduled_downtime_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3a194896-131b-4d98-879f-dc107aaccbde
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure trouble_downtime_hrsM = CALCULATE(SUM(pivot_nutrients[trouble_downtime_hrs]))
+		formatString: #,0.00
+		lineageTag: d9de9d58-9f92-4882-9ce8-37019a2f718c
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure trouble_downtime_percentM = CALCULATE(AVERAGE(pivot_nutrients[trouble_downtime_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 102741dd-5208-4b2f-8e87-38715e2926fe
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure var_cost_q10_q10_prodM = CALCULATE(SUM(pivot_nutrients[var_cost_q10_q10_prod]))
+		formatString: #,0.00
+		lineageTag: 57bb4a5d-7eb5-40ba-8e84-55493a07b866
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure var_cost_q10_qh_prodM = CALCULATE(SUM(pivot_nutrients[var_cost_q10_qh_prod]))
+		formatString: #,0.00
+		lineageTag: a0c70876-ea30-4829-89a6-109a5a8b0899
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure var_cost_qh_prodM = CALCULATE(SUM(pivot_nutrients[var_cost_qh_prod]))
+		formatString: #,0.00
+		lineageTag: 0ec83cfc-38cb-4abc-bb6a-1b626a21dce2
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure yield_q10_percentM = CALCULATE(AVERAGE(pivot_nutrients[yield_q10_percent])/100)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b70348a9-7ad3-4e71-8619-3d38608821ce
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure yield_qh_percentM = CALCULATE(AVERAGE(pivot_nutrients[yield_qh_percent])/100)
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		lineageTag: 2c995cf9-d115-4b86-9403-26541bb7c9ef
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure global_equipment_process_downtime_commentsM = CALCULATE(MAX(pivot_nutrients[global_equipment_process_downtime_comments]))
+		lineageTag: 7461b5ff-a9c9-4594-97ef-6bec06f2619a
+
+		changedProperty = Name
+
+	measure global_fixed_costs_total_maintenance_commentsM = CALCULATE(MAX(pivot_nutrients[global_fixed_costs_total_maintenance_comments]))
+		lineageTag: 81755110-8583-46ed-b3e3-36076a057d61
+
+		changedProperty = Name
+
+	measure global_process_yield_commentsM = CALCULATE(MAX(pivot_nutrients[global_process_yield_comments]))
+		lineageTag: 76b0486a-cb03-4325-93f5-ebfb4b1292b4
+
+		changedProperty = Name
+
+	measure global_project_x_commentsM = CALCULATE(MAX(pivot_nutrients[global_project_x_comments]))
+		lineageTag: f7444390-ce3e-4876-a83b-dc45cfb8cbe5
+
+		changedProperty = Name
+
+	measure global_safety_environmental_commentsM = CALCULATE(MAX(pivot_nutrients[global_safety_environmental_comments]))
+		lineageTag: b8c9bcf5-e494-49d0-9629-30e823b0988e
+
+		changedProperty = Name
+
+	measure global_scheduled_downtime_commentsM = CALCULATE(MAX(pivot_nutrients[global_scheduled_downtime_comments]))
+		lineageTag: e0dbfe88-426e-46ec-81bc-ca4a0759c6e4
+
+		changedProperty = Name
+
+	measure global_summary_significant_items_monthM = CALCULATE(MAX(pivot_nutrients[global_summary_significant_items_month]))
+		lineageTag: 222f218d-297a-4603-9514-aae43cf4be30
+
+		changedProperty = Name
+
+	measure global_variable_cost_commentsM = CALCULATE(MAX(pivot_nutrients[global_variable_cost_comments]))
+		lineageTag: a0f270d9-3045-42d8-a5e8-956626aa4061
+
+		changedProperty = Name
+
+	measure ntr_quality_issuesM = CALCULATE(MAX(pivot_nutrients[ntr_quality_issues]))
+		lineageTag: 0d51afe5-119b-44a5-9611-60ebcf5e1b30
+
+		changedProperty = Name
+
+	measure last_edit_datetimeM = CALCULATE(MAX(pivot_nutrients[last_edit_datetime]))
+		formatString: General Date
+		lineageTag: 5d698f5c-bfba-4916-81e1-c6209cb74958
+
+		changedProperty = Name
+
+	measure LastDayOfMonthM = CALCULATE(MAX(pivot_nutrients[LastDayOfMonth]))
+		formatString: General Date
+		lineageTag: 84ac9fad-abc2-43ba-a03b-b797f777604f
+
+		changedProperty = Name
+
+	column category
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 95aff958-0e59-4717-86ee-933fa64f3107
+		sourceLineageTag: category
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_edit_datetime
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: eb7a12a0-6544-4368-82a4-4dcd7befab2f
+		sourceLineageTag: last_edit_datetime
+		summarizeBy: none
+		sourceColumn: last_edit_datetime
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastDayOfMonth
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: bdb2495b-4495-43b5-acf6-5985e4a952be
+		sourceLineageTag: LastDayOfMonth
+		summarizeBy: none
+		sourceColumn: LastDayOfMonth
+
+		changedProperty = FormatString
+
+		changedProperty = DataType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column actual_q10_kgs
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: e6d3a9b8-276d-4e0f-a8b3-4821cf939cff
+		sourceLineageTag: actual_q10_kgs
+		summarizeBy: sum
+		sourceColumn: actual_q10_kgs
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column planned_q10_kgs
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: f791ba12-2ff4-4169-8134-e1261090e1ad
+		sourceLineageTag: planned_q10_kgs
+		summarizeBy: sum
+		sourceColumn: planned_q10_kgs
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_qh_kgs
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 35359947-a07f-4c0b-b457-b4f34b54d823
+		sourceLineageTag: actual_qh_kgs
+		summarizeBy: sum
+		sourceColumn: actual_qh_kgs
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column planned_qh_kgs
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 20761168-081c-4e1f-b7b0-c100f295ba9c
+		sourceLineageTag: planned_qh_kgs
+		summarizeBy: sum
+		sourceColumn: planned_qh_kgs
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column oee_net_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: f75a95fa-4bf7-464b-b5ff-32b2004a03d1
+		sourceLineageTag: oee_net_percent
+		summarizeBy: sum
+		sourceColumn: oee_net_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column oee_gross_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: ecff0037-f581-466e-8897-5dfb545cd692
+		sourceLineageTag: oee_gross_percent
+		summarizeBy: sum
+		sourceColumn: oee_gross_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column scheduled_downtime_hrs
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 30f0db40-3598-4ada-8e31-f628f3d1bf8e
+		sourceLineageTag: scheduled_downtime_hrs
+		summarizeBy: sum
+		sourceColumn: scheduled_downtime_hrs
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column scheduled_downtime_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 97fefb3b-188d-4a94-bb86-bec8b0127b42
+		sourceLineageTag: scheduled_downtime_percent
+		summarizeBy: sum
+		sourceColumn: scheduled_downtime_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column equipment_downtime_hrs
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 2c7126eb-2d6b-4cd4-ad1b-57681f178f0c
+		sourceLineageTag: equipment_downtime_hrs
+		summarizeBy: sum
+		sourceColumn: equipment_downtime_hrs
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column equipment_downtime_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 67eb88d3-0408-471b-bd28-47c7d9a064a7
+		sourceLineageTag: equipment_downtime_percent
+		summarizeBy: sum
+		sourceColumn: equipment_downtime_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column process_downtime_hrs
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: c9411c9b-69cd-4749-8eab-08cb9a480e0d
+		sourceLineageTag: process_downtime_hrs
+		summarizeBy: sum
+		sourceColumn: process_downtime_hrs
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column process_downtime_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: b97e16fe-5a12-4d32-883b-e766c5ee1c53
+		sourceLineageTag: process_downtime_percent
+		summarizeBy: sum
+		sourceColumn: process_downtime_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trouble_downtime_hrs
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 2994ae87-e345-4221-8701-c2479b8096cd
+		sourceLineageTag: trouble_downtime_hrs
+		summarizeBy: sum
+		sourceColumn: trouble_downtime_hrs
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trouble_downtime_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 8dd5e4b8-4add-47a9-9a0c-625dbb9c3a36
+		sourceLineageTag: trouble_downtime_percent
+		summarizeBy: sum
+		sourceColumn: trouble_downtime_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column packaging_yield_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 2a3afa7f-7e25-4e9f-92d9-e95ef198660a
+		sourceLineageTag: packaging_yield_percent
+		summarizeBy: sum
+		sourceColumn: packaging_yield_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column yield_qh_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 8f0fa060-5ff5-4e9a-8f61-a125bcd89e32
+		sourceLineageTag: yield_qh_percent
+		summarizeBy: sum
+		sourceColumn: yield_qh_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column yield_q10_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 9ea0c720-34cb-480e-9b7e-b8739fa7b756
+		sourceLineageTag: yield_q10_percent
+		summarizeBy: sum
+		sourceColumn: yield_q10_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column var_cost_q10_qh_prod
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 86b00140-6d05-430a-a301-7c53f460f32f
+		sourceLineageTag: var_cost_q10_qh_prod
+		summarizeBy: sum
+		sourceColumn: var_cost_q10_qh_prod
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column var_cost_q10_q10_prod
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: f9ab8f53-e504-43fe-89f9-3fab84e5e9a9
+		sourceLineageTag: var_cost_q10_q10_prod
+		summarizeBy: sum
+		sourceColumn: var_cost_q10_q10_prod
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column var_cost_qh_prod
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: e736e9f6-c014-4f3f-82f6-671f6c24d851
+		sourceLineageTag: var_cost_qh_prod
+		summarizeBy: sum
+		sourceColumn: var_cost_qh_prod
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column maintenance_cost_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: f8f73c84-d062-4238-833e-15fba570dbad
+		sourceLineageTag: maintenance_cost_percent
+		summarizeBy: sum
+		sourceColumn: maintenance_cost_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fixed_cost_percent
+		dataType: double
+		isHidden
+		sourceProviderType: float
+		lineageTag: 198f627a-1980-45f4-bccd-e2504311666c
+		sourceLineageTag: fixed_cost_percent
+		summarizeBy: sum
+		sourceColumn: fixed_cost_percent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column global_safety_environmental_comments
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 0315e2d8-2f44-4999-be57-a95cc14e81e1
+		sourceLineageTag: global_safety_environmental_comments
+		summarizeBy: none
+		sourceColumn: global_safety_environmental_comments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column global_equipment_process_downtime_comments
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 8a537e30-7c67-4bb8-ab0c-998ca216e6cf
+		sourceLineageTag: global_equipment_process_downtime_comments
+		summarizeBy: none
+		sourceColumn: global_equipment_process_downtime_comments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column global_process_yield_comments
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 6cd2bb98-2ba6-4d7d-b49d-6d3b3ca1fbe4
+		sourceLineageTag: global_process_yield_comments
+		summarizeBy: none
+		sourceColumn: global_process_yield_comments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column global_scheduled_downtime_comments
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 31b7ced7-3f5c-48ca-ad2b-389046c749fb
+		sourceLineageTag: global_scheduled_downtime_comments
+		summarizeBy: none
+		sourceColumn: global_scheduled_downtime_comments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column global_project_x_comments
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 6a46e8aa-0288-425d-b709-cfb4747ff40d
+		sourceLineageTag: global_project_x_comments
+		summarizeBy: none
+		sourceColumn: global_project_x_comments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ntr_quality_issues
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: de3c7a3b-8fbc-48ff-8649-aec152f580e4
+		sourceLineageTag: ntr_quality_issues
+		summarizeBy: none
+		sourceColumn: ntr_quality_issues
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column global_summary_significant_items_month
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 9bcbe522-57af-4c50-8af4-f72c6c6304cf
+		sourceLineageTag: global_summary_significant_items_month
+		summarizeBy: none
+		sourceColumn: global_summary_significant_items_month
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column global_fixed_costs_total_maintenance_comments
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: b1777832-f842-40b5-b32e-71d77ecdc796
+		sourceLineageTag: global_fixed_costs_total_maintenance_comments
+		summarizeBy: none
+		sourceColumn: global_fixed_costs_total_maintenance_comments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column global_variable_cost_comments
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: bc225a12-aef5-4021-88f8-777748a85d0f
+		sourceLineageTag: global_variable_cost_comments
+		summarizeBy: none
+		sourceColumn: global_variable_cost_comments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition pivot_nutrients = entity
+		mode: directLake
+		source
+			entityName: pivot_nutrients
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

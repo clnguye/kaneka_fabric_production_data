@@ -1,0 +1,31 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "dfg2_nutrients_KPI_Description",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "table_column_metadata": {
+      "queryId": "d34387df-adad-4d60-9490-2c22f98f97c1",
+      "queryName": "table_column_metadata"
+    },
+    "table_column_metadata_DataDestination": {
+      "queryId": "7f342bdf-3aa9-4769-977a-c576b47b0b2c",
+      "queryName": "table_column_metadata_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"7282b56d-8250-4fdd-aa71-ff5db1c338cd\",\"DatasourceId\":\"bc0fac37-ec50-4a66-8e16-597d7ecdd463\"}"
+    },
+    {
+      "path": "Warehouse",
+      "kind": "Warehouse",
+      "connectionId": "{\"ClusterId\":\"7282b56d-8250-4fdd-aa71-ff5db1c338cd\",\"DatasourceId\":\"5271f196-e842-4a02-b7d1-c3caf7b14386\"}"
+    }
+  ]
+}

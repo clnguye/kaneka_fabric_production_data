@@ -1,0 +1,136 @@
+table unpivot_nutrients
+	lineageTag: 808f1037-98c4-4336-af5d-3097898a98fe
+	sourceLineageTag: [dbo].[unpivot_nutrients]
+
+	measure mValue =
+			
+			VAR _attr = SELECTEDVALUE(unpivot_nutrients[Attribute],"xxxx")
+			var _percent = CONTAINSSTRING(_attr,"percent")
+			var _result = IF(_percent,CALCULATE(AVERAGE(unpivot_nutrients[Value]))/100,CALCULATE(SUM(unpivot_nutrients[Value])))
+			RETURN _result
+		lineageTag: 630b2160-b904-4c59-b5d4-1b0ed8c2adee
+
+		formatStringDefinition = ```
+				VAR KPI_DESC = SELECTEDVALUE(unpivot_nutrients[Attribute])
+				VAR _result = 
+				SWITCH(KPI_DESC,
+				"actual_qh_kgs", "#0,.00K",
+				"actual_q10_kgs", "#0,.00K",
+				"planned_qh_kgs", "#0,.00K",
+				"planned_q10_kgs", "#0,.00K",
+				"oee_net_percent", "#0.0%",
+				"oee_gross_percent", "#0.0%",
+				"Stream Factor", "#0.0%",
+				"scheduled_downtime_hrs", "#,0",
+				"scheduled_downtime_percent", "#0.0%",
+				"process_downtime_hrs", "#,0",
+				"process_downtime_percent", "#0.0%",
+				"equipment_downtime_hrs", "#,0",
+				"equipment_downtime_percent", "#0.0%",
+				"trouble_downtime_percent", "#0.0%",
+				"trouble_downtime_hrs", "#,0",
+				"packaging_yield_percent", "#0.0%",
+				"yield_qh_percent", "#0.0%",
+				"yield_q10_percent", "#0.0%",
+				"5S score", "#0.00",
+				"Cost Reduction", "$#0.",
+				"var_cost_q10_q10_prod","$#,0.",
+				"var_cost_q10_qh_prod","$#,0.",
+				"var_cost_qh_prod","$#,0.",
+				"maintenance_cost_percent", "#0.%",
+				"fixed_cost_percent","#0.%",
+				"#0.0")
+				RETURN _result
+				```
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+		changedProperty = FormatStringDefinition
+
+	measure mValue_raw =
+			
+			VAR _attr = SELECTEDVALUE(unpivot_nutrients[Attribute],"xxxx")
+			var _percent = CONTAINSSTRING(_attr,"percent")
+			var _result = IF(_percent,CALCULATE(AVERAGE(unpivot_nutrients[Value]))/100,CALCULATE(SUM(unpivot_nutrients[Value])))
+			RETURN _result
+		lineageTag: d5f99154-51d4-4320-84a0-fff0cf706ea6
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column category
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b5370c29-95f1-4d31-9849-59e910f0c4bf
+		sourceLineageTag: category
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_edit_datetime
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 281c5976-5db4-4338-99f6-0b57515a003c
+		sourceLineageTag: last_edit_datetime
+		summarizeBy: none
+		sourceColumn: last_edit_datetime
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastDayOfMonth
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: 377020ef-1420-4dd2-a0a8-e19ce7331a74
+		sourceLineageTag: LastDayOfMonth
+		summarizeBy: none
+		sourceColumn: LastDayOfMonth
+
+		changedProperty = FormatString
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Attribute
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7b6f3f8f-da3a-45e2-aaa6-75d81e1b0b60
+		sourceLineageTag: Attribute
+		summarizeBy: none
+		sourceColumn: Attribute
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 57da3965-6714-479f-bfb3-86a171a9f9ac
+		sourceLineageTag: Value
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition unpivot_nutrients = entity
+		mode: directLake
+		source
+			entityName: unpivot_nutrients
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

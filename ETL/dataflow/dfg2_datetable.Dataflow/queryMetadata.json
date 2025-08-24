@@ -1,0 +1,31 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "dfg2_datetable",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "date_table": {
+      "queryId": "0dc3226a-69f4-4e67-8210-836cbc7b57e7",
+      "queryName": "date_table"
+    },
+    "fiscal_year_start": {
+      "queryId": "a945d93f-3554-4e53-97f9-40c9e5a01c4e",
+      "queryName": "fiscal_year_start",
+      "loadEnabled": false
+    },
+    "date_table_DataDestination": {
+      "queryId": "a0caaa1f-bd42-409f-9a29-b51d722ec0b3",
+      "queryName": "date_table_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Warehouse",
+      "kind": "Warehouse",
+      "connectionId": "{\"ClusterId\":\"7282b56d-8250-4fdd-aa71-ff5db1c338cd\",\"DatasourceId\":\"5271f196-e842-4a02-b7d1-c3caf7b14386\"}"
+    }
+  ]
+}

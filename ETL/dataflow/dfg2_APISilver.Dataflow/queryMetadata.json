@@ -1,0 +1,51 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "dfg2_silver",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "nutrients": {
+      "queryId": "34377257-926a-4093-8816-4abae293ce4d",
+      "queryName": "nutrients"
+    },
+    "pivot_nutrients": {
+      "queryId": "79d6b0f3-bc3b-4270-b5ac-4e371bba1e8f",
+      "queryName": "pivot_nutrients"
+    },
+    "unpivot_nutrients": {
+      "queryId": "2e275be9-6bb2-4302-bc9d-faa1d972025c",
+      "queryName": "unpivot_nutrients"
+    },
+    "NavigationQuery": {
+      "queryId": "53acf901-278d-4e38-85ab-cce17616f037",
+      "queryName": "NavigationQuery",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "unpivot_nutrients_DataDestination": {
+      "queryId": "10aaa1c8-a7b8-4dcc-8cc5-e61708a19783",
+      "queryName": "unpivot_nutrients_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "pivot_nutrients_DataDestination": {
+      "queryId": "107282b3-3690-46d4-bb55-0850bb846aad",
+      "queryName": "pivot_nutrients_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"7282b56d-8250-4fdd-aa71-ff5db1c338cd\",\"DatasourceId\":\"bc0fac37-ec50-4a66-8e16-597d7ecdd463\"}"
+    },
+    {
+      "path": "Warehouse",
+      "kind": "Warehouse",
+      "connectionId": "{\"ClusterId\":\"7282b56d-8250-4fdd-aa71-ff5db1c338cd\",\"DatasourceId\":\"5271f196-e842-4a02-b7d1-c3caf7b14386\"}"
+    }
+  ]
+}

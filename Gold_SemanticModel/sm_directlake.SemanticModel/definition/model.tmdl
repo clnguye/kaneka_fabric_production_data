@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.147.7768.4 (Main)+1de83c1927f5084e1ddff9c9939f83132229167b
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+annotation PBI_ProTooling = ["WebModelingEdit","DaxQueryView_Desktop","CalcGroup"]
+
+ref table date_table
+ref table pivot_nutrients
+ref table unpivot_nutrients
+ref table 'Time Intelligence'
+ref table table_column_metadata
+
+ref cultureInfo en-US
+

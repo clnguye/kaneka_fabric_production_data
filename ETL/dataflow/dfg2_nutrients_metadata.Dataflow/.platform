@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "dfg2_nutrients_metadata"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "262cbcc4-4269-91b6-4ce5-3f92e438f2ca"
+  }
+}

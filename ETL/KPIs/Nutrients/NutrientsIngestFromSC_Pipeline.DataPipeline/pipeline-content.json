@@ -1,0 +1,346 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "WebActivity",
+        "typeProperties": {
+          "method": "POST",
+          "relativeUrl": "/authentication/v1/Login/LoginWithServiceUser",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "username": "fabric_api",
+            "password": "Fabric2025$"
+          },
+          "httpRequestTimeout": ""
+        },
+        "externalReferences": {
+          "connection": "fd053ced-0bb7-44e1-8b92-c76c16fb7982"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": true,
+          "secureOutput": true
+        },
+        "name": "Login",
+        "description": "Login to SC to retrieve the token",
+        "dependsOn": []
+      },
+      {
+        "type": "WebActivity",
+        "typeProperties": {
+          "method": "POST",
+          "relativeUrl": "/v1/EntryItem/Search",
+          "headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Authorization": {
+              "value": "@variables('accessToken')",
+              "type": "Expression"
+            }
+          },
+          "body": {
+            "value": "@concat(\n  '{',\n    '\"searchText\":\"', variables('category'), '\",',\n    '\"mandatorGuid\":\"2943fcac-9418-487c-aa70-a33773d8673a\",',\n    '\"lastEditDateTimeInterval\":{',\n      '\"start\":\"', variables('start_datetime'), '\",',\n      '\"end\":\"', utcNow(), '\"}',\n  '}'\n)",
+            "type": "Expression"
+          }
+        },
+        "externalReferences": {
+          "connection": "ab169d93-beb9-4d86-961d-546d0f966036"
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 3,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Search ProductionKPI RecordIds",
+        "description": "Search ProductionKPI Record Ids",
+        "dependsOn": [
+          {
+            "activity": "SetCategoryAndLastRunDateTime",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "accessToken",
+          "value": {
+            "value": "@concat('Bearer ', activity('Login').output.accessToken)",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "secureInput": true,
+          "secureOutput": true
+        },
+        "name": "Set Auth Token",
+        "description": "Set Auth Token",
+        "dependsOn": [
+          {
+            "activity": "Login",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ForEach",
+        "typeProperties": {
+          "isSequential": true,
+          "items": {
+            "value": "@activity('Search ProductionKPI RecordIds').output.recordIds",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "type": "TridentNotebook",
+              "typeProperties": {
+                "notebookId": "dd0d9dd0-b9aa-8057-410f-0dadceb694cf",
+                "workspaceId": "00000000-0000-0000-0000-000000000000",
+                "parameters": {
+                  "input_json_array_str": {
+                    "value": {
+                      "value": "@string(json(activity('Retrive ProductionKPI Values').output.Response))",
+                      "type": "Expression"
+                    },
+                    "type": "string"
+                  }
+                }
+              },
+              "policy": {
+                "timeout": "0.0:10:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "Extract Transform and Save Data",
+              "description": "Extract Transform and Save Data",
+              "dependsOn": [
+                {
+                  "activity": "Retrive ProductionKPI Values",
+                  "dependencyConditions": [
+                    "Succeeded"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "WebActivity",
+              "typeProperties": {
+                "method": "POST",
+                "relativeUrl": "/moduleApi/ShiftconnectorApi/Asset/V2/EntryItems",
+                "headers": {
+                  "Content-Type": "application/json",
+                  "Accept": "application/json"
+                },
+                "body": {
+                  "value": "@concat('{ \"entryItemGuids\": [\"', item(), '\"], \"loadBusinessFieldValues\": \"true\" }')",
+                  "type": "Expression"
+                }
+              },
+              "externalReferences": {
+                "connection": "e04d7296-20d9-41c6-afd5-29a9a98f7c10"
+              },
+              "policy": {
+                "timeout": "0.00:10:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "Retrive ProductionKPI Values",
+              "description": "Retrieve Production KPI Values",
+              "dependsOn": []
+            }
+          ]
+        },
+        "name": "ForEachRecordIds",
+        "description": "For Each RecordIds",
+        "dependsOn": [
+          {
+            "activity": "Search ProductionKPI RecordIds",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "b9010b2f-ac9e-bc3d-466f-f354acef7da8",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "last_run": {
+              "value": {
+                "value": "@utcNow()",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "category": {
+              "value": {
+                "value": "@variables('category')",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "UpdateLastRunDateTime",
+        "description": "Update LastRun DateTime",
+        "dependsOn": [
+          {
+            "activity": "Search ProductionKPI RecordIds",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "5385811d-e108-9640-4da1-64785d333775",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "category": {
+              "value": {
+                "value": "@variables('category')",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "ReadCategoryAndLastRunDateTime",
+        "description": "Read Category And LastRun DateTime",
+        "dependsOn": [
+          {
+            "activity": "Set Auth Token",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "start_datetime",
+          "value": {
+            "value": "@activity('LookupLastRunDatetime').output.firstRow.lastRunEndTime",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "SetCategoryAndLastRunDateTime",
+        "description": "Read and Set CategoryAndLastRunDateTime",
+        "dependsOn": [
+          {
+            "activity": "LookupLastRunDatetime",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Lookup",
+        "typeProperties": {
+          "source": {
+            "type": "JsonSource",
+            "formatSettings": {
+              "type": "JsonReadSettings"
+            },
+            "storeSettings": {
+              "type": "LakehouseReadSettings",
+              "recursive": false,
+              "enablePartitionDiscovery": false
+            }
+          },
+          "datasetSettings": {
+            "type": "Json",
+            "typeProperties": {
+              "location": {
+                "type": "LakehouseLocation",
+                "folderPath": "pipeline_output",
+                "fileName": "last_run.json"
+              }
+            },
+            "schema": {},
+            "linkedService": {
+              "name": "lh_production",
+              "properties": {
+                "type": "Lakehouse",
+                "typeProperties": {
+                  "artifactId": "827f5b28-4130-8bfd-4aea-7cea368c303b",
+                  "workspaceId": "00000000-0000-0000-0000-000000000000",
+                  "rootFolder": "Files"
+                },
+                "annotations": []
+              }
+            },
+            "annotations": []
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "LookupLastRunDatetime",
+        "description": "Lookup Last Run Datetime",
+        "dependsOn": [
+          {
+            "activity": "ReadCategoryAndLastRunDateTime",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ],
+    "variables": {
+      "accessToken": {
+        "type": "String"
+      },
+      "category": {
+        "type": "String",
+        "defaultValue": "Nutrients Monthly KPIs"
+      },
+      "start_datetime": {
+        "type": "String"
+      }
+    }
+  }
+}

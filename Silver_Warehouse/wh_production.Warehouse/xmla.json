@@ -1,0 +1,1568 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Nutrient_Comments_columns_metadata",
+        "sourceLineageTag": "[dbo].[Nutrient_Comments_columns_metadata]",
+        "columns": [
+          {
+            "name": "TABLE_CATALOG",
+            "dataType": "string",
+            "sourceColumn": "TABLE_CATALOG",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "TABLE_CATALOG",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TABLE_SCHEMA",
+            "dataType": "string",
+            "sourceColumn": "TABLE_SCHEMA",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "TABLE_SCHEMA",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TABLE_NAME",
+            "dataType": "string",
+            "sourceColumn": "TABLE_NAME",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "TABLE_NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "COLUMN_NAME",
+            "dataType": "string",
+            "sourceColumn": "COLUMN_NAME",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "COLUMN_NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ORDINAL_POSITION",
+            "dataType": "int64",
+            "sourceColumn": "ORDINAL_POSITION",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ORDINAL_POSITION",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "COLUMN_DEFAULT",
+            "dataType": "string",
+            "sourceColumn": "COLUMN_DEFAULT",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "COLUMN_DEFAULT",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "IS_NULLABLE",
+            "dataType": "string",
+            "sourceColumn": "IS_NULLABLE",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "IS_NULLABLE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DATA_TYPE",
+            "dataType": "string",
+            "sourceColumn": "DATA_TYPE",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "DATA_TYPE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CHARACTER_MAXIMUM_LENGTH",
+            "dataType": "int64",
+            "sourceColumn": "CHARACTER_MAXIMUM_LENGTH",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CHARACTER_MAXIMUM_LENGTH",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CHARACTER_OCTET_LENGTH",
+            "dataType": "int64",
+            "sourceColumn": "CHARACTER_OCTET_LENGTH",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CHARACTER_OCTET_LENGTH",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "NUMERIC_PRECISION",
+            "dataType": "int64",
+            "sourceColumn": "NUMERIC_PRECISION",
+            "formatString": "0",
+            "sourceProviderType": "tinyint",
+            "sourceLineageTag": "NUMERIC_PRECISION",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "NUMERIC_PRECISION_RADIX",
+            "dataType": "int64",
+            "sourceColumn": "NUMERIC_PRECISION_RADIX",
+            "formatString": "0",
+            "sourceProviderType": "smallint",
+            "sourceLineageTag": "NUMERIC_PRECISION_RADIX",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "NUMERIC_SCALE",
+            "dataType": "int64",
+            "sourceColumn": "NUMERIC_SCALE",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "NUMERIC_SCALE",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DATETIME_PRECISION",
+            "dataType": "int64",
+            "sourceColumn": "DATETIME_PRECISION",
+            "formatString": "0",
+            "sourceProviderType": "smallint",
+            "sourceLineageTag": "DATETIME_PRECISION",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CHARACTER_SET_CATALOG",
+            "dataType": "string",
+            "sourceColumn": "CHARACTER_SET_CATALOG",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "CHARACTER_SET_CATALOG",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CHARACTER_SET_SCHEMA",
+            "dataType": "string",
+            "sourceColumn": "CHARACTER_SET_SCHEMA",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "CHARACTER_SET_SCHEMA",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CHARACTER_SET_NAME",
+            "dataType": "string",
+            "sourceColumn": "CHARACTER_SET_NAME",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "CHARACTER_SET_NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "COLLATION_CATALOG",
+            "dataType": "string",
+            "sourceColumn": "COLLATION_CATALOG",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "COLLATION_CATALOG",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "COLLATION_SCHEMA",
+            "dataType": "string",
+            "sourceColumn": "COLLATION_SCHEMA",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "COLLATION_SCHEMA",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "COLLATION_NAME",
+            "dataType": "string",
+            "sourceColumn": "COLLATION_NAME",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "COLLATION_NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DOMAIN_CATALOG",
+            "dataType": "string",
+            "sourceColumn": "DOMAIN_CATALOG",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "DOMAIN_CATALOG",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DOMAIN_SCHEMA",
+            "dataType": "string",
+            "sourceColumn": "DOMAIN_SCHEMA",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "DOMAIN_SCHEMA",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DOMAIN_NAME",
+            "dataType": "string",
+            "sourceColumn": "DOMAIN_NAME",
+            "sourceProviderType": "nvarchar",
+            "sourceLineageTag": "DOMAIN_NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Nutrient_Comments_columns_metadata",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "date_table",
+        "sourceLineageTag": "[dbo].[date_table]",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "Date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Day",
+            "dataType": "string",
+            "sourceColumn": "Day",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Day",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "sourceColumn": "Quarter",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Quarter",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Month Name",
+            "dataType": "string",
+            "sourceColumn": "Month Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Month Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Month",
+            "dataType": "double",
+            "sourceColumn": "Month",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Month",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Month Yr",
+            "dataType": "string",
+            "sourceColumn": "Month Yr",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Month Yr",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Yr Month",
+            "dataType": "string",
+            "sourceColumn": "Yr Month",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Yr Month",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Year",
+            "dataType": "double",
+            "sourceColumn": "Year",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Year",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Weekend",
+            "dataType": "string",
+            "sourceColumn": "Weekend",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Weekend",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Week of year",
+            "dataType": "double",
+            "sourceColumn": "Week of year",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Week of year",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Week of month",
+            "dataType": "double",
+            "sourceColumn": "Week of month",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Week of month",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Start of quarter",
+            "dataType": "dateTime",
+            "sourceColumn": "Start of quarter",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "Start of quarter",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "End of quarter",
+            "dataType": "dateTime",
+            "sourceColumn": "End of quarter",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "End of quarter",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Start of month",
+            "dataType": "dateTime",
+            "sourceColumn": "Start of month",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "Start of month",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "End of month",
+            "dataType": "dateTime",
+            "sourceColumn": "End of month",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "End of month",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Days in month",
+            "dataType": "double",
+            "sourceColumn": "Days in month",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Days in month",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Fiscal year",
+            "dataType": "double",
+            "sourceColumn": "Fiscal year",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Fiscal year",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Fiscal month",
+            "dataType": "double",
+            "sourceColumn": "Fiscal month",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Fiscal month",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Fiscal Quarter",
+            "dataType": "string",
+            "sourceColumn": "Fiscal Quarter",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Fiscal Quarter",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Fiscal Year End",
+            "dataType": "double",
+            "sourceColumn": "Fiscal Year End",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Fiscal Year End",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "date_table",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "nutrient_kpi_dataflow",
+        "sourceLineageTag": "[dbo].[nutrient_kpi_dataflow]",
+        "columns": [
+          {
+            "name": "Nutrients FY2024",
+            "dataType": "string",
+            "sourceColumn": "Nutrients FY2024",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Nutrients FY2024",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Target",
+            "dataType": "string",
+            "sourceColumn": "Target",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Target",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Month",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Value",
+            "dataType": "double",
+            "sourceColumn": "Value",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Value",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "nutrient_kpi_dataflow",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "pivot_nutrients",
+        "sourceLineageTag": "[dbo].[pivot_nutrients]",
+        "columns": [
+          {
+            "name": "category",
+            "dataType": "string",
+            "sourceColumn": "category",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "category",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "last_edit_datetime",
+            "dataType": "dateTime",
+            "sourceColumn": "last_edit_datetime",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "last_edit_datetime",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LastDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "LastDayOfMonth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "actual_q10_kgs",
+            "dataType": "double",
+            "sourceColumn": "actual_q10_kgs",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "actual_q10_kgs",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "planned_q10_kgs",
+            "dataType": "double",
+            "sourceColumn": "planned_q10_kgs",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "planned_q10_kgs",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "actual_qh_kgs",
+            "dataType": "double",
+            "sourceColumn": "actual_qh_kgs",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "actual_qh_kgs",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "planned_qh_kgs",
+            "dataType": "double",
+            "sourceColumn": "planned_qh_kgs",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "planned_qh_kgs",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "oee_net_percent",
+            "dataType": "double",
+            "sourceColumn": "oee_net_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "oee_net_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "oee_gross_percent",
+            "dataType": "double",
+            "sourceColumn": "oee_gross_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "oee_gross_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "scheduled_downtime_hrs",
+            "dataType": "double",
+            "sourceColumn": "scheduled_downtime_hrs",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "scheduled_downtime_hrs",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "scheduled_downtime_percent",
+            "dataType": "double",
+            "sourceColumn": "scheduled_downtime_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "scheduled_downtime_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "equipment_downtime_hrs",
+            "dataType": "double",
+            "sourceColumn": "equipment_downtime_hrs",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "equipment_downtime_hrs",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "equipment_downtime_percent",
+            "dataType": "double",
+            "sourceColumn": "equipment_downtime_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "equipment_downtime_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "process_downtime_hrs",
+            "dataType": "double",
+            "sourceColumn": "process_downtime_hrs",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "process_downtime_hrs",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "process_downtime_percent",
+            "dataType": "double",
+            "sourceColumn": "process_downtime_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "process_downtime_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "trouble_downtime_hrs",
+            "dataType": "double",
+            "sourceColumn": "trouble_downtime_hrs",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "trouble_downtime_hrs",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "trouble_downtime_percent",
+            "dataType": "double",
+            "sourceColumn": "trouble_downtime_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "trouble_downtime_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "packaging_yield_percent",
+            "dataType": "double",
+            "sourceColumn": "packaging_yield_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "packaging_yield_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "yield_qh_percent",
+            "dataType": "double",
+            "sourceColumn": "yield_qh_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "yield_qh_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "yield_q10_percent",
+            "dataType": "double",
+            "sourceColumn": "yield_q10_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "yield_q10_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "var_cost_q10_qh_prod",
+            "dataType": "double",
+            "sourceColumn": "var_cost_q10_qh_prod",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "var_cost_q10_qh_prod",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "var_cost_q10_q10_prod",
+            "dataType": "double",
+            "sourceColumn": "var_cost_q10_q10_prod",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "var_cost_q10_q10_prod",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "var_cost_qh_prod",
+            "dataType": "double",
+            "sourceColumn": "var_cost_qh_prod",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "var_cost_qh_prod",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "maintenance_cost_percent",
+            "dataType": "double",
+            "sourceColumn": "maintenance_cost_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "maintenance_cost_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "fixed_cost_percent",
+            "dataType": "double",
+            "sourceColumn": "fixed_cost_percent",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "fixed_cost_percent",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "global_safety_environmental_comments",
+            "dataType": "string",
+            "sourceColumn": "global_safety_environmental_comments",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "global_safety_environmental_comments",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "global_equipment_process_downtime_comments",
+            "dataType": "string",
+            "sourceColumn": "global_equipment_process_downtime_comments",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "global_equipment_process_downtime_comments",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "global_process_yield_comments",
+            "dataType": "string",
+            "sourceColumn": "global_process_yield_comments",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "global_process_yield_comments",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "global_scheduled_downtime_comments",
+            "dataType": "string",
+            "sourceColumn": "global_scheduled_downtime_comments",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "global_scheduled_downtime_comments",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "global_project_x_comments",
+            "dataType": "string",
+            "sourceColumn": "global_project_x_comments",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "global_project_x_comments",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ntr_quality_issues",
+            "dataType": "string",
+            "sourceColumn": "ntr_quality_issues",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ntr_quality_issues",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "global_summary_significant_items_month",
+            "dataType": "string",
+            "sourceColumn": "global_summary_significant_items_month",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "global_summary_significant_items_month",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "global_fixed_costs_total_maintenance_comments",
+            "dataType": "string",
+            "sourceColumn": "global_fixed_costs_total_maintenance_comments",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "global_fixed_costs_total_maintenance_comments",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "global_variable_cost_comments",
+            "dataType": "string",
+            "sourceColumn": "global_variable_cost_comments",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "global_variable_cost_comments",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "pivot_nutrients",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "table_column_metadata",
+        "sourceLineageTag": "[dbo].[table_column_metadata]",
+        "columns": [
+          {
+            "name": "table",
+            "dataType": "string",
+            "sourceColumn": "table",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "table",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "column",
+            "dataType": "string",
+            "sourceColumn": "column",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "column",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "description",
+            "dataType": "string",
+            "sourceColumn": "description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "table_column_metadata",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "unpivot_nutrients",
+        "sourceLineageTag": "[dbo].[unpivot_nutrients]",
+        "columns": [
+          {
+            "name": "category",
+            "dataType": "string",
+            "sourceColumn": "category",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "category",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "last_edit_datetime",
+            "dataType": "dateTime",
+            "sourceColumn": "last_edit_datetime",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "last_edit_datetime",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LastDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "LastDayOfMonth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Attribute",
+            "dataType": "string",
+            "sourceColumn": "Attribute",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Attribute",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Value",
+            "dataType": "double",
+            "sourceColumn": "Value",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "Value",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "unpivot_nutrients",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

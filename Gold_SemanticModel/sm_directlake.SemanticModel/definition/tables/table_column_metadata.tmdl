@@ -1,0 +1,45 @@
+table table_column_metadata
+	lineageTag: 0fc0ae7f-e80d-48fe-a79e-0c9208c43994
+	sourceLineageTag: [dbo].[table_column_metadata]
+
+	column table
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1b50f3fe-4865-47d4-a480-cd3527975f68
+		sourceLineageTag: table
+		summarizeBy: none
+		sourceColumn: table
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attribute
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f3d36e2b-481f-4498-8e4e-d76ec7825ce8
+		sourceLineageTag: column
+		summarizeBy: none
+		sourceColumn: column
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 62eb34dc-b016-4ce2-91a8-283af657ac6c
+		sourceLineageTag: description
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition table_column_metadata = entity
+		mode: directLake
+		source
+			entityName: table_column_metadata
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

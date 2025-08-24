@@ -1,0 +1,41 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Dataflow 1",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Nutrients Scorecard FY2024 KPIs xlsx": {
+      "queryId": "a6bdc9f8-1613-4743-b2df-5ce16ec1f5b7",
+      "queryName": "Nutrients Scorecard FY2024 KPIs xlsx"
+    },
+    "Nutrients Scorecard FY2024 KPIs xlsx_DataDestination": {
+      "queryId": "8bcf45d5-a601-44d1-b1fd-6cbebe92f0c6",
+      "queryName": "Nutrients Scorecard FY2024 KPIs xlsx_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"7282b56d-8250-4fdd-aa71-ff5db1c338cd\",\"DatasourceId\":\"bc0fac37-ec50-4a66-8e16-597d7ecdd463\"}"
+    },
+    {
+      "path": "https://onelake.dfs.fabric.microsoft.com/Production_Data/lh_production.Lakehouse/Files/OneDrive_1_5-22-2025/Nutrients%20Scorecard%20FY2024%20KPIs.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"7282b56d-8250-4fdd-aa71-ff5db1c338cd\",\"DatasourceId\":\"9e50de8c-af51-4971-a1e6-0c62e043c015\"}"
+    },
+    {
+      "path": "PowerPlatformDataflows",
+      "kind": "PowerPlatformDataflows",
+      "connectionId": "{\"ClusterId\":\"7282b56d-8250-4fdd-aa71-ff5db1c338cd\",\"DatasourceId\":\"e647d49b-51ca-40e7-98bd-fb8e76e91851\"}"
+    },
+    {
+      "path": "Warehouse",
+      "kind": "Warehouse",
+      "connectionId": "{\"ClusterId\":\"7282b56d-8250-4fdd-aa71-ff5db1c338cd\",\"DatasourceId\":\"5271f196-e842-4a02-b7d1-c3caf7b14386\"}"
+    }
+  ]
+}
