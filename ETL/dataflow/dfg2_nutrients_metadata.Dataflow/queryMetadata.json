@@ -10,7 +10,7 @@
       "queryName": "table_column_metadata"
     },
     "table_column_metadata_DataDestination": {
-      "queryId": "7f342bdf-3aa9-4769-977a-c576b47b0b2c",
+      "queryId": "cae2885c-cb26-4d66-80f1-35701bcf14ea",
       "queryName": "table_column_metadata_DataDestination",
       "isHidden": true,
       "loadEnabled": false
